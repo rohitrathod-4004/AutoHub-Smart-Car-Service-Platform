@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Service 1 -->
+        <CheckBox
+            android:id="@+id/checkbox_service1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Car Washing at Doorstep" />
+
+        <EditText
+            android:id="@+id/price_service1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter price for Car Washing at Doorstep"
+            android:inputType="number"
+            android:visibility="gone"
+            android:padding="8dp"
+            android:background="@android:drawable/editbox_background"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Service 2 -->
+        <CheckBox
+            android:id="@+id/checkbox_service2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick up and Return Washing Service" />
+
+        <EditText
+            android:id="@+id/price_service2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter price for Pick up and Return Washing Service"
+            android:inputType="number"
+            android:visibility="gone"
+            android:padding="8dp"
+            android:background="@android:drawable/editbox_background"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Service 3 -->
+        <CheckBox
+            android:id="@+id/checkbox_service3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Car Washing Appointment" />
+
+        <EditText
+            android:id="@+id/price_service3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter price for Car Washing Appointment"
+            android:inputType="number"
+            android:visibility="gone"
+            android:padding="8dp"
+            android:background="@android:drawable/editbox_background"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Submit"
+            android:backgroundTint="#673AB7"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</ScrollView>

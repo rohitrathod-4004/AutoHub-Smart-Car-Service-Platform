@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">AutoHub</string>
+    <string name="select">Documents</string>
+
+    <string name="un_text"><u>Upload your document</u></string>
+    <string name="un_text2"><u>Tap here if you are in danger</u></string>
+    <string name="welcome">Welcome!</string>
+    <string name="do_you_want_to_verify_documents_now">Do You want to Verify Documents Now?</string>
+    <string name="yes">Yes</string>
+    <string name="skip">skip</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="signup">Signup</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="full_name">Full Name</string>
+    <string name="mobile_no">Mobile no.</string>
+    <string name="username">Username</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="_300">₹300</string>
+    <string name="more_utilities_to_add">More utilities to add...</string>
+    <string name="add_new_button">Add New button</string>
+
+
+
+    <string-array name="profession_array">
+        <item>Washing Center Owner</item>
+        <item>Mechanic</item>
+        <item>Car Rental Service</item>
+        <item>Car Accessories Shop</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="profession_list">
+        <item>Car Washer</item>
+        <item>Mechanic</item>
+        <item>Detailing Expert</item>
+    </string-array>
+
+    <string name="add_utilities">add utilities</string>
+    <string name="go_to_washing">Go to Washing</string>
+    <string name="autohub">AutoHub</string>
+    <string name="welcome_anisha">Welcome Anisha</string>
+    <string name="here_s_what_you_need_to_do_set_up_your_account">Here\'s what you need to do set up your account</string>
+    <string name="driving_licence">Driving Licence</string>
+    <string name="aadhaar_card">Aadhaar Card</string>
+    <string name="pan_card">Pan Card</string>
+    <string name="rc_details">RC Details</string>
+    <string name="profile_photo">Profile Photo</string>
+    <string name="enter_driving_licence_number">Enter Driving Licence number</string>
+    <string name="miscellaneous">Miscellaneous</string>
+    <string name="current_month_expense">Current month expense</string>
+    <string name="_1500">₹1500</string>
+    <string name="fuel">Fuel</string>
+    <string name="maintenance">Maintenance</string>
+    <string name="toll_fine">Toll / Fine</string>
+    <string name="view_all_expense">View All Expense</string>
+    <string name="back_button">Back Button</string>
+    <string name="total_expense">Total expense</string>
+    <string name="add">ADD</string>
+    <string name="enter_the_amount">Enter the amount</string>
+    <string name="add_expense">ADD EXPENSE</string>
+    <string name="refetch_amount_from_database">Refetch amount from database</string>
+    <string name="expensemanagerbutton">Expense Manager Button</string>
+    <string name="washing">Washing</string>
+    <string name="expense">Expense</string>
+    <string name="Washing_center_name" />
+    <string name="login_owner">Login(Owner)</string>
+    <string name="address">Address</string>
+    <string name="item_logo">Item Logo</string>
+    <string name="status_icon">Status Icon</string>
+    <string name="document_image">document_image\n</string>
+    <string name="driving_license">driving_license</string>
+</resources>

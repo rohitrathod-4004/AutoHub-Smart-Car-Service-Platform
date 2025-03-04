@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#6200EE</color> <!-- Add a primary color -->
+    <color name="colorPrimaryDark">#3700B3</color> <!-- Add a darker primary color -->
+    <color name="colorAccent">#03DAC5</color>
+    <color name="green">#4FE34F</color>
+    <color name="red">#C95B56</color>
+    <color name="orange">#EA8801</color> <!-- Add an accent color -->
+    <color name="blue">#2196F3</color>
+    <color name="teal_700">#00796B</color>
+    <color name="purple_500">#9C27B0</color>
+
+</resources>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#82B2DB"
+    android:backgroundTint="#82B2DB">
+
+    <EditText
+        android:id="@+id/welcomeText"
+        android:layout_width="345dp"
+        android:layout_height="67dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/welcome"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.09" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="345dp"
+        android:layout_height="70dp"
+        android:backgroundTint="@color/cardview_dark_background"
+        android:text="@string/here_s_what_you_need_to_do_set_up_your_account"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeText"
+        app:layout_constraintVertical_bias="0.02" />
+
+    <TextView
+        android:id="@+id/drivingLicense_TextView"
+        android:layout_width="345dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="23dp"
+        android:gravity="center|left"
+        android:paddingStart="12dp"
+        android:background="#5DAAE3"
+        android:text="@string/driving_licence"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:drawableEndCompat="@drawable/baseline_arrow_forward_ios_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.062"
+        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/aadharCard_TextView"
+        android:layout_width="345dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center|left"
+        android:paddingStart="12dp"
+        android:background="#5DAAE3"
+        android:text="@string/aadhaar_card"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:drawableEndCompat="@drawable/baseline_arrow_forward_ios_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/drivingLicense_TextView"
+        app:layout_constraintVertical_bias="0.025" />
+
+    <TextView
+        android:id="@+id/panCard_TextView"
+        android:layout_width="345dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:drawableRight="@drawable/baseline_arrow_forward_ios_24"
+        android:gravity="center|left"
+        android:paddingLeft="12dp"
+        android:background="#5DAAE3"
+        android:text="@string/pan_card"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aadharCard_TextView"
+        app:layout_constraintVertical_bias="0.044" />
+
+    <TextView
+        android:id="@+id/profilePhoto_TextView"
+        android:layout_width="345dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:background="#5DAAE3"
+        android:drawableRight="@drawable/baseline_arrow_forward_ios_24"
+        android:gravity="center|left"
+        android:paddingLeft="12dp"
+        android:text="@string/profile_photo"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/panCard_TextView"
+        app:layout_constraintVertical_bias="0.045" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="39dp"
+        android:layout_height="33dp"
+        android:background="#5DAAE3"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/drivingLicense_TextView"
+        app:layout_constraintEnd_toEndOf="@+id/drivingLicense_TextView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/drivingLicense_TextView"
+        app:layout_constraintTop_toTopOf="@+id/drivingLicense_TextView"
+        app:layout_constraintVertical_bias="0.47"
+        app:srcCompat="@drawable/baseline_check_24" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="39dp"
+        android:layout_height="33dp"
+        android:background="#5DAAE3"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/aadharCard_TextView"
+        app:layout_constraintEnd_toEndOf="@+id/aadharCard_TextView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/aadharCard_TextView"
+        app:layout_constraintTop_toTopOf="@+id/aadharCard_TextView"
+        app:layout_constraintVertical_bias="0.47"
+        app:srcCompat="@drawable/baseline_check_24" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="39dp"
+        android:layout_height="33dp"
+        android:background="#5DAAE3"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/panCard_TextView"
+        app:layout_constraintEnd_toEndOf="@+id/panCard_TextView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/panCard_TextView"
+        app:layout_constraintTop_toTopOf="@+id/panCard_TextView"
+        app:layout_constraintVertical_bias="0.47"
+        app:srcCompat="@drawable/baseline_check_24" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="39dp"
+        android:layout_height="33dp"
+        android:background="#5DAAE3"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/profilePhoto_TextView"
+        app:layout_constraintEnd_toEndOf="@+id/profilePhoto_TextView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/profilePhoto_TextView"
+        app:layout_constraintTop_toTopOf="@+id/profilePhoto_TextView"
+        app:layout_constraintVertical_bias="0.47"
+        app:srcCompat="@drawable/baseline_check_24" />
+
+    <Button
+        android:id="@+id/doneButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="288dp"
+        android:backgroundTint="#2196F3"
+        android:text="Done"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profilePhoto_TextView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

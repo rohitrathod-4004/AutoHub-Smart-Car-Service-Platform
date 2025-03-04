@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Owner Signup"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginBottom="20dp" />
+
+    <EditText
+        android:id="@+id/owner_name"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="Full Name"
+        android:padding="10dp"
+        android:background="@drawable/edit_text_default_background"
+        android:drawablePadding="20dp"
+        android:drawableTint="@color/cardview_dark_background"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/owner_email"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:background="@drawable/edit_text_default_background"
+        android:drawablePadding="20dp"
+        android:drawableTint="@color/cardview_dark_background"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/owner_password"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:background="@drawable/edit_text_default_background"
+        android:drawablePadding="20dp"
+        android:drawableTint="@color/cardview_dark_background"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/owner_phone"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        android:padding="10dp"
+        android:background="@drawable/edit_text_default_background"
+        android:drawablePadding="20dp"
+        android:drawableTint="@color/cardview_dark_background"
+        android:layout_marginBottom="16dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp">
+
+        <Spinner
+            android:id="@+id/profession_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edit_text_default_background"
+            android:paddingEnd="40dp"
+            android:paddingStart="10dp"
+            android:entries="@array/profession_list" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/baseline_arrow_drop_down_24"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            app:tint="@color/cardview_dark_background" />
+    </RelativeLayout>
+
+
+    <EditText
+        android:id="@+id/owner_shop_name"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Shop Name"
+        android:padding="10dp"
+        android:background="@drawable/edit_text_default_background"
+        android:drawablePadding="20dp"
+        android:drawableTint="@color/cardview_dark_background"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/owner_shop_location"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Shop Location"
+        android:padding="10dp"
+        android:background="@drawable/edit_text_default_background"
+        android:drawablePadding="20dp"
+        android:drawableTint="@color/cardview_dark_background"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btn_signup_owner"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Sign Up"
+        android:backgroundTint="@color/blue"
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>

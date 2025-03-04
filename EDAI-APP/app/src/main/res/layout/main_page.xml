@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#82B2DB"
+    android:backgroundTint="#82B2DB">
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="414dp"
+        android:layout_height="78dp"
+        android:background="#FF5DAAE3"
+        android:backgroundTint="#FF5DAAE3"
+        android:gravity="center"
+        android:paddingStart="30dp"
+        android:text="@string/autohub"
+        android:textColor="#090909"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/washingCenter"
+        android:layout_width="164dp"
+        android:layout_height="146dp"
+        android:scaleType="fitCenter"
+        android:background="#82B2DB"
+        android:contentDescription="@string/go_to_washing"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.886"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView27"
+        app:layout_constraintVertical_bias="0.244"
+        app:srcCompat="@drawable/car_wash" />
+
+    <TextView
+        android:id="@+id/expenseText"
+        android:layout_width="86dp"
+        android:layout_height="29dp"
+        android:gravity="center"
+        android:text="@string/expense"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/washingCenter"
+        app:layout_constraintVertical_bias="0.016" />
+
+    <TextView
+        android:id="@+id/washingText"
+        android:layout_width="85dp"
+        android:layout_height="28dp"
+        android:gravity="center"
+        android:text="@string/washing"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.783"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/washingCenter"
+        app:layout_constraintVertical_bias="0.018" />
+
+    <TextView
+        android:id="@+id/moreUtilitiesToAddText"
+        android:layout_width="359dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="76dp"
+        android:gravity="center"
+        android:text="more utilities coming soon..."
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageButton"
+        app:layout_constraintVertical_bias="0.094" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="120dp"
+        android:layout_height="146dp"
+        android:background="#FEFEFE"
+        android:contentDescription="@string/add_utilities"
+        android:text=""
+        android:visibility="gone"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.559"
+        app:srcCompat="@drawable/baseline_add_24" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="55dp"
+        android:layout_height="41dp"
+        android:background="#FF5DAAE3"
+        android:visibility="gone"
+        android:contentDescription="@string/back_button"
+        app:layout_constraintBottom_toBottomOf="@+id/textView27"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="@+id/textView27"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.38"
+        app:srcCompat="@drawable/baseline_arrow_back_ios_24"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="14dp" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="63dp"
+        android:layout_height="51dp"
+        android:background="#FF5DAAE3"
+        android:contentDescription="@string/profile_photo"
+        app:layout_constraintBottom_toBottomOf="@+id/textView27"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textView27"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_foreground"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="58dp" />
+
+    <ImageButton
+        android:id="@+id/expenseManager"
+        android:layout_width="164dp"
+        android:layout_height="146dp"
+        android:background="#82B2DB"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:text=""
+        android:contentDescription="@string/expensemanagerbutton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.244"
+        app:srcCompat="@drawable/car_expense"
+        tools:ignore="ContentDescription" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

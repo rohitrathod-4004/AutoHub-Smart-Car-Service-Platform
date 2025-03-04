@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8BE98F">
+
+    <EditText
+        android:id="@+id/enterEmailLoginadmin"
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:autofillHints=""
+        android:background="@drawable/edit_shape2"
+        android:drawableStart="@drawable/baseline_email_24"
+        android:drawablePadding="20dp"
+        android:drawableTint="@color/cardview_dark_background"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:padding="20dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginDescriptionadmin"
+        app:layout_constraintVertical_bias="0.122" />
+
+    <EditText
+        android:id="@+id/enterPasswordLoginadmin"
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:autofillHints=""
+        android:background="@drawable/edit_shape2"
+        android:drawableStart="@drawable/password"
+        android:drawablePadding="20dp"
+        android:drawableTint="@color/cardview_dark_background"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:padding="20dp"
+        android:textSize="20sp"
+        app:drawableEndCompat="@drawable/hidden"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterEmailLoginadmin"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <Button
+        android:id="@+id/login_Buttonadmin"
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#22B829"
+        android:gravity="center"
+        android:text="@string/login"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterPasswordLoginadmin"
+        app:layout_constraintVertical_bias="0.094" />
+
+    <TextView
+        android:id="@+id/loginDescriptionadmin"
+        android:layout_width="360dp"
+        android:layout_height="71dp"
+        android:gravity="center"
+        android:text="Login(Admin)"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.162" />
+
+    <ImageView
+        android:id="@+id/toggleIconadmin"
+        android:layout_width="42dp"
+        android:layout_height="36dp"
+        android:background="#8BE98F"
+        android:backgroundTint="#8BE98F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.902"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.483"
+        app:srcCompat="@drawable/eye" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

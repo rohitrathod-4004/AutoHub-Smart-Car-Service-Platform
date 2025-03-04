@@ -1,0 +1,70 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AUTOHUB">
+
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SignupActivity" />
+        <activity android:name=".ExpenseActivity" />
+        <activity android:name=".Washing" />
+        <activity android:name=".WashingCenterActivity" />
+        <activity android:name=".WashingPage" />
+        <activity android:name=".WashingCenterDetailActivity" />
+        <activity android:name=".DocumentVerificationActivity" />
+        <activity android:name=".DocumentationActivity" />
+        <activity android:name=".AADHARCardActivity" />
+        <activity android:name=".RCDetailsActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".PANCardActivity" />
+        <activity android:name=".DrivingLicenseActivity" />
+        <activity android:name=".LoginActivityOwner" />
+        <activity android:name=".MainActivityOwner" />
+        <activity android:name=".SignupActivityOwner" />
+        <activity android:name=".ExpenseActivityOwner" />
+        <activity android:name=".WashingPageOwner" />
+        <activity android:name=".AppointmentsActivity" />
+        <activity android:name=".AvailableWashingCentersActivity" />
+        <activity android:name=".ServiceSelectionActivityOwner" />
+        <activity android:name=".OwnerRequestActivity" />
+        <activity android:name=".AppointmentsActivityTP" />
+        <activity android:name=".ExpenseHistoryActivity" />
+        <activity android:name=".ExpenseHistoryActivityOwner" />
+        <activity android:name=".HistoryActivity" />
+        <activity android:name=".UpdateTimeSlotsOwnerNormal"/>
+        <activity android:name=".UpdateTimeSlotsOwnerDoorStep"/>
+        <activity android:name=".UpdateTimeSlotsOwnerPickupReturn"/>
+        <activity android:name=".UpdateTimeSlotsSelectService"/>
+        <activity android:name=".Profile_userActivity"/>
+        <activity android:name=".DocumentDetailActivity"/>
+        <activity android:name=".LoginActivityAdmin"/>
+        <activity android:name=".MainActivityAdmin"/>
+        <activity android:name=".VerifyWashingCenters"/>
+
+
+
+
+    </application>
+</manifest>

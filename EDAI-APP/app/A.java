@@ -1,0 +1,1 @@
+Download the google-services.json file and place it in the app/ directory of your Android project.

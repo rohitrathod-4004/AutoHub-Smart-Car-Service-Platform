@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="8dp"
+    tools:context=".ExpenseActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Expense Amount Input -->
+        <EditText
+            android:id="@+id/edtAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Amount"
+            android:inputType="numberDecimal"
+            android:importantForAccessibility="yes"
+            android:contentDescription="Expense Amount Input"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Expense Category Spinner -->
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:importantForAccessibility="yes"
+            android:contentDescription="Expense Category Spinner"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Date Selection Button -->
+        <Button
+            android:id="@+id/btnDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Date"
+            android:importantForAccessibility="yes"
+            android:contentDescription="Select Expense Date"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Time Selection Button -->
+        <Button
+            android:id="@+id/btnTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Time"
+            android:importantForAccessibility="yes"
+            android:contentDescription="Select Expense Time"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Display Selected Date -->
+        <TextView
+            android:id="@+id/tvSelectedDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selected Date: "
+            android:textColor="@android:color/darker_gray"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Display Selected Time -->
+        <TextView
+            android:id="@+id/tvSelectedTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selected Time: "
+            android:textColor="@android:color/darker_gray"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/btnAction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Expense"
+            android:importantForAccessibility="yes"
+            android:contentDescription="Submit Expense"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

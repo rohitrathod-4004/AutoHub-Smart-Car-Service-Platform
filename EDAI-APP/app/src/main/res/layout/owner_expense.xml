@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BCA3E8"
+    android:backgroundTint="#BCA3E8">
+
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="175dp"
+        android:layout_height="123dp"
+        android:background="#B38FF3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.932"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dontHaveAnAccount_Text"
+        app:layout_constraintVertical_bias="0.066" />
+
+    <TextView
+        android:id="@+id/dontHaveAnAccount_Text"
+        android:layout_width="410dp"
+        android:layout_height="243dp"
+        android:background="#9261E8"
+        android:ems="10"
+        android:inputType=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.208" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="241dp"
+        android:layout_height="82dp"
+        android:gravity="center"
+        android:text="@string/total_expense"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView41"
+        app:layout_constraintEnd_toStartOf="@+id/totalExpenseAmount"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="@+id/dontHaveAnAccount_Text"
+        app:layout_constraintTop_toTopOf="@+id/dontHaveAnAccount_Text"
+        app:layout_constraintVertical_bias="0.551" />
+
+    <TextView
+        android:id="@+id/totalExpenseAmount"
+        android:layout_width="119dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="24dp"
+        android:background="#722BF3"
+        android:ems="10"
+        android:gravity="center"
+        android:text="₹3550"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView41"
+        app:layout_constraintEnd_toEndOf="@+id/dontHaveAnAccount_Text"
+        app:layout_constraintHorizontal_bias="0.941"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/dontHaveAnAccount_Text"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="99dp"
+        android:layout_height="84dp"
+        android:background="#BCA3E8"
+        android:importantForAccessibility="no"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.98"
+        app:srcCompat="@drawable/add" />
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="241dp"
+        android:layout_height="82dp"
+        android:gravity="center"
+        android:text="@string/current_month_expense"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/dontHaveAnAccount_Text"
+        app:layout_constraintEnd_toStartOf="@+id/currentMonthExpenseAmount"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="@+id/dontHaveAnAccount_Text"
+        app:layout_constraintTop_toBottomOf="@+id/textView41"
+        app:layout_constraintVertical_bias="0.322" />
+
+    <TextView
+        android:id="@+id/currentMonthExpenseAmount"
+        android:layout_width="119dp"
+        android:layout_height="62dp"
+        android:background="#722BF3"
+        android:ems="10"
+        android:gravity="center"
+        android:text="@string/_1500"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/dontHaveAnAccount_Text"
+        app:layout_constraintEnd_toEndOf="@+id/dontHaveAnAccount_Text"
+        app:layout_constraintHorizontal_bias="0.941"
+        app:layout_constraintStart_toEndOf="@+id/textView36"
+        app:layout_constraintTop_toBottomOf="@+id/textView41"
+        app:layout_constraintVertical_bias="0.392" />
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="414dp"
+        android:layout_height="18dp"
+        android:background="#A587DA"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/dontHaveAnAccount_Text"
+        app:layout_constraintEnd_toEndOf="@+id/dontHaveAnAccount_Text"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/dontHaveAnAccount_Text"
+        app:layout_constraintTop_toTopOf="@+id/dontHaveAnAccount_Text"
+        app:layout_constraintVertical_bias="0.497" />
+
+    <TextView
+        android:id="@+id/textView44"
+        android:layout_width="175dp"
+        android:layout_height="123dp"
+        android:background="#B38FF3"
+        android:gravity="center"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dontHaveAnAccount_Text"
+        app:layout_constraintVertical_bias="0.066" />
+
+    <TextView
+        android:id="@+id/textView43"
+        android:layout_width="173dp"
+        android:layout_height="29dp"
+        android:gravity="center"
+        android:text="@string/fuel"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView44"
+        app:layout_constraintEnd_toEndOf="@+id/textView44"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="@+id/textView44"
+        app:layout_constraintTop_toTopOf="@+id/textView44"
+        app:layout_constraintVertical_bias="0.166" />
+
+    <TextView
+        android:id="@+id/textView45"
+        android:layout_width="173dp"
+        android:layout_height="29dp"
+        android:gravity="center"
+        android:text="@string/maintenance"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView42"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toStartOf="@+id/textView42"
+        app:layout_constraintTop_toTopOf="@+id/textView42"
+        app:layout_constraintVertical_bias="0.172" />
+
+    <TextView
+        android:id="@+id/textView46"
+        android:layout_width="175dp"
+        android:layout_height="123dp"
+        android:background="#B38FF3"
+        android:gravity="center"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView44"
+        app:layout_constraintVertical_bias="0.111" />
+
+    <TextView
+        android:id="@+id/textView47"
+        android:layout_width="175dp"
+        android:layout_height="123dp"
+        android:background="#B38FF3"
+        android:gravity="center"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.923"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView42"
+        app:layout_constraintVertical_bias="0.111" />
+
+    <TextView
+        android:id="@+id/textView48"
+        android:layout_width="173dp"
+        android:layout_height="29dp"
+        android:gravity="center"
+        android:text="@string/toll_fine"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView46"
+        app:layout_constraintEnd_toEndOf="@+id/textView46"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textView46"
+        app:layout_constraintTop_toTopOf="@+id/textView46"
+        app:layout_constraintVertical_bias="0.148" />
+
+    <TextView
+        android:id="@+id/textView49"
+        android:layout_width="173dp"
+        android:layout_height="29dp"
+        android:gravity="center"
+        android:text="@string/miscellaneous"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView47"
+        app:layout_constraintEnd_toEndOf="@+id/textView47"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textView47"
+        app:layout_constraintTop_toTopOf="@+id/textView47"
+        app:layout_constraintVertical_bias="0.148" />
+
+    <TextView
+        android:id="@+id/fuelAmount"
+        android:layout_width="149dp"
+        android:layout_height="59dp"
+        android:ems="10"
+        android:gravity="center"
+        android:text="₹300"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView44"
+        app:layout_constraintEnd_toEndOf="@+id/textView44"
+        app:layout_constraintHorizontal_bias="0.519"
+        app:layout_constraintStart_toStartOf="@+id/textView44"
+        app:layout_constraintTop_toTopOf="@+id/textView44"
+        app:layout_constraintVertical_bias="0.747" />
+
+    <TextView
+        android:id="@+id/maintainanceAmount"
+        android:layout_width="125dp"
+        android:layout_height="53dp"
+        android:ems="10"
+        android:gravity="center"
+        android:text="₹1000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView42"
+        app:layout_constraintEnd_toEndOf="@+id/textView42"
+        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintStart_toStartOf="@+id/textView42"
+        app:layout_constraintTop_toTopOf="@+id/textView42"
+        app:layout_constraintVertical_bias="0.735" />
+
+    <TextView
+        android:id="@+id/tollFineAmount"
+        android:layout_width="126dp"
+        android:layout_height="56dp"
+        android:ems="10"
+        android:gravity="center"
+        android:text="₹50"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView46"
+        app:layout_constraintEnd_toEndOf="@+id/textView46"
+        app:layout_constraintStart_toStartOf="@+id/textView46"
+        app:layout_constraintTop_toTopOf="@+id/textView46"
+        app:layout_constraintVertical_bias="0.747" />
+
+    <TextView
+        android:id="@+id/miscellaneousAmount"
+        android:layout_width="126dp"
+        android:layout_height="56dp"
+        android:ems="10"
+        android:gravity="center"
+        android:text="₹10"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView47"
+        app:layout_constraintEnd_toEndOf="@+id/textView47"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="@+id/textView47"
+        app:layout_constraintTop_toTopOf="@+id/textView47"
+        app:layout_constraintVertical_bias="0.735" />
+
+    <TextView
+        android:id="@+id/textView50"
+        android:layout_width="376dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="124dp"
+        android:background="#5DAAE3"
+        android:gravity="center|left"
+        android:paddingStart="12dp"
+        android:text="@string/view_all_expense"
+        android:textSize="28sp"
+        android:visibility="gone"
+        app:drawableEndCompat="@drawable/baseline_arrow_forward_ios_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView46"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView56"
+        android:layout_width="415dp"
+        android:layout_height="83dp"
+        android:background="#A67DED"
+        android:backgroundTint="#A67DED"
+        android:gravity="center"
+        android:paddingStart="30dp"
+        android:text="@string/autohub"
+        android:textColor="#090909"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="63dp"
+        android:layout_height="51dp"
+        android:background="#A67DED"
+        android:visibility="gone"
+        android:contentDescription="@string/profile_photo"
+        app:layout_constraintBottom_toBottomOf="@+id/textView56"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textView56"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="55dp"
+        android:layout_height="41dp"
+        android:visibility="gone"
+        android:background="#A67DED"
+        android:contentDescription="@string/back_button"
+        app:layout_constraintBottom_toBottomOf="@+id/textView56"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="@+id/textView56"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.38"
+        app:srcCompat="@drawable/baseline_arrow_back_ios_24" />
+
+    <ImageButton
+        android:id="@+id/refetchDataFromDatabase"
+        android:layout_width="53dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="40dp"
+        android:background="#BCA3E8"
+        android:contentDescription="@string/refetch_amount_from_database"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView46"
+        app:srcCompat="@android:drawable/ic_menu_rotate" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

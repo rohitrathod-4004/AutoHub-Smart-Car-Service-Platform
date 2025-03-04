@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#82B2DB"
+    android:backgroundTint="#82B2DB">
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="414dp"
+        android:layout_height="78dp"
+        android:background="#FF5DAAE3"
+        android:backgroundTint="#FF5DAAE3"
+        android:gravity="center|left"
+        android:paddingLeft="30dp"
+        android:text="AutoHub"
+        android:textColor="#090909"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="375dp"
+        android:layout_height="wrap_content"
+        android:text="Let's find your Registration Certificate (RC)"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView26"
+        app:layout_constraintVertical_bias="0.158"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="375dp"
+        android:layout_height="95dp"
+        android:text="Enter your vehicle number plate and we'll get the required information from the Parivahan"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView28"
+        app:layout_constraintVertical_bias="0.021" />
+
+    <EditText
+        android:id="@+id/editTextText6"
+        android:layout_width="375dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_shape"
+        android:ems="10"
+        android:hint="XX88 XY8888"
+        android:inputType="text"
+        android:padding="13dp"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView30"
+        app:layout_constraintVertical_bias="0.016" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="375dp"
+        android:layout_height="35dp"
+        android:gravity="center|left"
+        android:text="Vehicle Registration Number"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView29"
+        app:layout_constraintVertical_bias="0.156" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="375dp"
+        android:layout_height="75dp"
+        android:backgroundTint="#0F8BE1"
+        android:gravity="center"
+        android:text="Continue"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText6"
+        app:layout_constraintVertical_bias="0.819" />
+</androidx.constraintlayout.widget.ConstraintLayout>
