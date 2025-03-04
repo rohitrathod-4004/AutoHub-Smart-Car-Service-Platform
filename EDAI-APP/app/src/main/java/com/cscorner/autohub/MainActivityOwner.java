@@ -1,5 +1,6 @@
 package com.cscorner.autohub;
 
+import com.cscorner.autohub.mechanic.MechanicActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,8 +16,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class MainActivityOwner extends AppCompatActivity {
 
-    private ImageButton expenseManagerButton, goToWashingPage;
-    private TextView expenseText, washingTextView, notVerified;
+    private ImageButton expenseManagerButton, goToWashingPage, mechanicAssistance;
+    private TextView expenseText, washingTextView, notVerified, mechanicalText;
 
     private FirebaseFirestore db;
     private FirebaseAuth auth;
@@ -25,7 +26,7 @@ public class MainActivityOwner extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FirebaseApp.initializeApp(this);
-        setContentView(R.layout.owner_main); // Linking owner_main.xml
+        setContentView(R.layout.owner_main);
 
         // Initialize Firebase Firestore and Auth
         db = FirebaseFirestore.getInstance();
@@ -34,8 +35,10 @@ public class MainActivityOwner extends AppCompatActivity {
         // Initialize UI elements
         expenseManagerButton = findViewById(R.id.expenseManager);
         goToWashingPage = findViewById(R.id.washingCenter);
+        mechanicAssistance = findViewById(R.id.mechanicAssistance);
         expenseText = findViewById(R.id.expenseText);
         washingTextView = findViewById(R.id.washingText);
+        mechanicalText = findViewById(R.id.mechanicalText);
         notVerified = findViewById(R.id.verificationTextView);
 
         // Initially hide elements
@@ -43,51 +46,55 @@ public class MainActivityOwner extends AppCompatActivity {
         expenseText.setVisibility(View.GONE);
         goToWashingPage.setVisibility(View.GONE);
         washingTextView.setVisibility(View.GONE);
+        mechanicAssistance.setVisibility(View.GONE);
+        mechanicalText.setVisibility(View.GONE);
         notVerified.setVisibility(View.GONE);
 
-        // Fetch verification status from Firestore
-        fetchVerificationStatus();
+        // Fetch user profession and verification status
+        fetchUserDetails();
 
         // Set OnClickListeners
-        expenseManagerButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivityOwner.this, ExpenseActivityOwner.class);
-                startActivity(intent);
-            }
+        expenseManagerButton.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivityOwner.this, ExpenseActivityOwner.class);
+            startActivity(intent);
         });
 
-        goToWashingPage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivityOwner.this, WashingPageOwner.class);
-                startActivity(intent);
-            }
+        goToWashingPage.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivityOwner.this, WashingPageOwner.class);
+            startActivity(intent);
+        });
+
+        mechanicAssistance.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivityOwner.this, MechanicActivity.class);
+            startActivity(intent);
         });
     }
 
-    private void fetchVerificationStatus() {
+    private void fetchUserDetails() {
         String currentUserId = auth.getCurrentUser().getUid(); // Get current user's UID
         DocumentReference docRef = db.collection("WashingCenterOwners").document(currentUserId);
 
         docRef.get().addOnSuccessListener(documentSnapshot -> {
             if (documentSnapshot.exists()) {
+                String profession = documentSnapshot.getString("profession");
                 String verificationStatus = documentSnapshot.getString("verification");
 
                 if ("accepted".equals(verificationStatus)) {
                     // Show verified user elements
                     expenseManagerButton.setVisibility(View.VISIBLE);
                     expenseText.setVisibility(View.VISIBLE);
-                    goToWashingPage.setVisibility(View.VISIBLE);
-                    washingTextView.setVisibility(View.VISIBLE);
                     notVerified.setVisibility(View.GONE);
+
+                    if ("Washing Center Owner".equals(profession)) {
+                        goToWashingPage.setVisibility(View.VISIBLE);
+                        washingTextView.setVisibility(View.VISIBLE);
+                    } else if ("Mechanic".equals(profession)) {
+                        mechanicAssistance.setVisibility(View.VISIBLE);
+                        mechanicalText.setVisibility(View.VISIBLE);
+                    }
                 } else {
                     // Show not verified message
                     notVerified.setVisibility(View.VISIBLE);
-                    expenseManagerButton.setVisibility(View.GONE);
-                    expenseText.setVisibility(View.GONE);
-                    goToWashingPage.setVisibility(View.GONE);
-                    washingTextView.setVisibility(View.GONE);
                 }
             } else {
                 // Handle case where document does not exist
@@ -96,7 +103,7 @@ public class MainActivityOwner extends AppCompatActivity {
             }
         }).addOnFailureListener(e -> {
             // Handle Firestore fetch error
-            notVerified.setText("Failed to fetch verification status!");
+            notVerified.setText("Failed to fetch user details!");
             notVerified.setVisibility(View.VISIBLE);
         });
     }

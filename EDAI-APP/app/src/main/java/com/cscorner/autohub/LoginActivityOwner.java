@@ -11,7 +11,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -57,7 +56,7 @@ public class LoginActivityOwner extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Navigate to SignupActivity for Owners
-                Intent intent = new Intent(LoginActivityOwner.this, SignupActivityOwner.class);
+                Intent intent = new Intent(LoginActivityOwner.this, SignUpActivityOwner.class);
                 startActivity(intent);
             }
         });

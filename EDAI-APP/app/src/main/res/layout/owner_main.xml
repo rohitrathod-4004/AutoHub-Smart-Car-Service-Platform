@@ -8,6 +8,35 @@
     android:backgroundTint="#BCA3E8">
 
     <TextView
+        android:id="@+id/mechanicalText"
+        android:layout_width="85dp"
+        android:layout_height="28dp"
+        android:gravity="center"
+        android:text="@string/mechanic"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.783"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/washingCenter"
+        app:layout_constraintVertical_bias="0.018" />
+
+    <ImageButton
+        android:id="@+id/mechanicAssistance"
+        android:layout_width="164dp"
+        android:layout_height="146dp"
+        android:background="#BCA3E8"
+        android:contentDescription="@string/go_to_washing"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.886"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView27"
+        app:layout_constraintVertical_bias="0.244"
+        app:srcCompat="@drawable/mechanic_logo" />
+
+    <TextView
         android:id="@+id/textView27"
         android:layout_width="414dp"
         android:layout_height="78dp"

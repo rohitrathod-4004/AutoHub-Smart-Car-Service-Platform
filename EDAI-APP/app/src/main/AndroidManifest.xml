@@ -1,6 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
@@ -42,7 +44,7 @@
         <activity android:name=".DrivingLicenseActivity" />
         <activity android:name=".LoginActivityOwner" />
         <activity android:name=".MainActivityOwner" />
-        <activity android:name=".SignupActivityOwner" />
+        <activity android:name=".SignUpActivityOwner" />
         <activity android:name=".ExpenseActivityOwner" />
         <activity android:name=".WashingPageOwner" />
         <activity android:name=".AppointmentsActivity" />
@@ -62,6 +64,9 @@
         <activity android:name=".LoginActivityAdmin"/>
         <activity android:name=".MainActivityAdmin"/>
         <activity android:name=".VerifyWashingCenters"/>
+        <activity android:name=".mechanic.MechanicActivity"/>
+        <activity android:name=".mechanic.AvailabilityActivity"/>
+        <activity android:name=".mechanic.HistoryActivity"/>
 
 
 

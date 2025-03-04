@@ -19,8 +19,9 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
-public class SignupActivityOwner extends AppCompatActivity {
+public class SignUpActivityOwner extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
@@ -65,22 +66,19 @@ public class SignupActivityOwner extends AppCompatActivity {
         });
 
         // Set click listener for signup
-        signupButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String name = nameEditText.getText().toString().trim();
-                String email = emailEditText.getText().toString().trim();
-                String password = passwordEditText.getText().toString().trim();
-                String phone = phoneEditText.getText().toString().trim();
-                String shopName = shopNameEditText.getText().toString().trim();
-                String shopLocation = shopLocationEditText.getText().toString().trim();
+        signupButton.setOnClickListener(v -> {
+            String name = nameEditText.getText().toString().trim();
+            String email = emailEditText.getText().toString().trim();
+            String password = passwordEditText.getText().toString().trim();
+            String phone = phoneEditText.getText().toString().trim();
+            String shopName = shopNameEditText.getText().toString().trim();
+            String shopLocation = shopLocationEditText.getText().toString().trim();
 
-                if (name.isEmpty() || email.isEmpty() || password.isEmpty() ||
-                        phone.isEmpty() || shopName.isEmpty() || shopLocation.isEmpty()) {
-                    Toast.makeText(SignupActivityOwner.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
-                } else {
-                    registerOwner(email, password, name, phone, shopName, shopLocation, selectedProfession);
-                }
+            if (name.isEmpty() || email.isEmpty() || password.isEmpty() ||
+                    phone.isEmpty() || shopName.isEmpty() || shopLocation.isEmpty()) {
+                Toast.makeText(SignUpActivityOwner.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
+            } else {
+                registerOwner(email, password, name, phone, shopName, shopLocation, selectedProfession);
             }
         });
     }
@@ -89,10 +87,10 @@ public class SignupActivityOwner extends AppCompatActivity {
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
-                        String ownerId = mAuth.getCurrentUser().getUid();
+                        String ownerId = Objects.requireNonNull(mAuth.getCurrentUser()).getUid();
                         saveOwnerToFirestore(ownerId, name, phone, email, shopName, shopLocation, profession);
                     } else {
-                        Toast.makeText(SignupActivityOwner.this, "Registration failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SignUpActivityOwner.this, "Registration failed: " + Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
     }
@@ -127,14 +125,17 @@ public class SignupActivityOwner extends AppCompatActivity {
                     if (task.isSuccessful()) {
                         if (profession.equals("Washing Center Owner")) {
                             createTimeSlotSubcollections(ownerId);
-                        } else {
+                        } else if (profession.equals("Mechanic")) {
+                            createMechanicLocationcollections(ownerId);
+                        }
+                        else {
                             handleOtherProfession(ownerId); // Placeholder for other professions
                         }
-                        Intent intent = new Intent(SignupActivityOwner.this, MainActivityOwner.class);
+                        Intent intent = new Intent(SignUpActivityOwner.this, MainActivityOwner.class);
                         startActivity(intent);
                         finish();
                     } else {
-                        Toast.makeText(SignupActivityOwner.this, "Failed to save owner details", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SignUpActivityOwner.this, "Failed to save owner details", Toast.LENGTH_SHORT).show();
                     }
                 });
     }
@@ -155,9 +156,20 @@ public class SignupActivityOwner extends AppCompatActivity {
                 .collection("TimeSlotsNormal").document("Default")
                 .set(timeSlotData);
     }
+    private void createMechanicLocationcollections(String ownerId) {
+        Map<String, Object> mechanicData = new HashMap<>();
+        mechanicData.put("availability","true");
+        mechanicData.put("latitude",0);
+        mechanicData.put("longitude",0);
 
-    private void handleOtherProfession(String ownerId) {
-        // Future implementation for different professions
-        Log.d("Signup", "Other profession selected: " + selectedProfession);
-    }
+
+        db.collection("WashingCenterOwners").document(ownerId)
+                .collection("TimeSlotsPickupReturn").document("Default")
+                .set(mechanicData);
+}
+
+private void handleOtherProfession(String ownerId) {
+    // Future implementation for different professions
+    Log.d("Signup", "Other profession selected: " + selectedProfession);
+}
 }
