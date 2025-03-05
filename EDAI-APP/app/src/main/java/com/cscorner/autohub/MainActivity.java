@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         goToMechanicPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, NearestMechanicsActivity.class);
+                Intent intent = new Intent(MainActivity.this, MechanicActivityUser.class);
                 startActivity(intent);
             }
         });

@@ -71,4 +71,5 @@
     <string name="document_image">document_image\n</string>
     <string name="driving_license">driving_license</string>
     <string name="mechanic">Mechanic</string>
+    <string name="Mechanic_Assistance">Mechanic Assistance</string>
 </resources>

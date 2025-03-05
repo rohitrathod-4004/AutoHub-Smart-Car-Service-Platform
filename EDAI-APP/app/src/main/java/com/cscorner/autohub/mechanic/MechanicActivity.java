@@ -17,6 +17,7 @@ public class MechanicActivity extends AppCompatActivity {
         // Initialize Buttons
         Button seeHistory = findViewById(R.id.seeHistory);
         Button beActive = findViewById(R.id.be_active);
+        Button emergencyRequests = findViewById(R.id.emergencyRequests);
 
         // Set Click Listeners
         seeHistory.setOnClickListener(v -> {
@@ -26,6 +27,11 @@ public class MechanicActivity extends AppCompatActivity {
 
         beActive.setOnClickListener(v -> {
             Intent intent = new Intent(MechanicActivity.this, AvailabilityActivity.class);
+            startActivity(intent);
+        });
+
+        emergencyRequests.setOnClickListener(v -> {
+            Intent intent = new Intent(MechanicActivity.this, MechanicEmergencyRequestsActivity.class);
             startActivity(intent);
         });
     }
