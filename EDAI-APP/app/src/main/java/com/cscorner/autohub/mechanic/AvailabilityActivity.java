@@ -71,7 +71,7 @@ public class AvailabilityActivity extends AppCompatActivity {
 
     private void fetchAvailabilityStatus() {
         String userId = Objects.requireNonNull(auth.getCurrentUser()).getUid();
-        db.collection("Users").document(userId).get().addOnSuccessListener(documentSnapshot -> {
+        db.collection("WashingCenterOwners").document(userId).get().addOnSuccessListener(documentSnapshot -> {
             if (documentSnapshot.exists()) {
                 boolean availability = documentSnapshot.getBoolean("availability") != null && Boolean.TRUE.equals(documentSnapshot.getBoolean("availability"));
                 availabilitySwitch.setChecked(availability);

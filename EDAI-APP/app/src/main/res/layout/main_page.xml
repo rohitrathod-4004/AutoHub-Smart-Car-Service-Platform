@@ -41,6 +41,24 @@
         app:layout_constraintVertical_bias="0.244"
         app:srcCompat="@drawable/car_wash" />
 
+<<<<<<< Updated upstream
+=======
+    <ImageButton
+        android:id="@+id/mechanic"
+        android:layout_width="164dp"
+        android:layout_height="146dp"
+        android:background="#82B2DB"
+        android:contentDescription="@string/go_to_washing"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.117"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView27"
+        app:layout_constraintVertical_bias="0.594"
+        app:srcCompat="@drawable/mechanic_logo" />
+
+>>>>>>> Stashed changes
     <TextView
         android:id="@+id/expenseText"
         android:layout_width="86dp"
@@ -70,6 +88,23 @@
         app:layout_constraintVertical_bias="0.018" />
 
     <TextView
+<<<<<<< Updated upstream
+=======
+        android:id="@+id/mechanicText"
+        android:layout_width="89dp"
+        android:layout_height="29dp"
+        android:gravity="center"
+        android:text="@string/mechanic"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.236"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/washingCenter"
+        app:layout_constraintVertical_bias="0.535" />
+
+    <TextView
+>>>>>>> Stashed changes
         android:id="@+id/moreUtilitiesToAddText"
         android:layout_width="359dp"
         android:layout_height="37dp"
