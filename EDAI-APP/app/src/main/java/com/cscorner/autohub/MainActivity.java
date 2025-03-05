@@ -8,6 +8,8 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.cscorner.autohub.UserMechanic.NearestMechanicsActivity;
+
 import com.cscorner.autohub.UserMechanic.MechanicActivityUser;
 import com.google.firebase.FirebaseApp;
 
@@ -51,6 +53,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, MechanicActivityUser.class);
+                startActivity(intent);
+            }
+        });
+
+        // Set OnClickListener for Profile Button
+        profileButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Profile_userActivity.class);
+                startActivity(intent);
+            }
+        });
+        // Set OnClickListener for Mechanic Assistance
+        goToMechanicPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, NearestMechanicsActivity.class);
                 startActivity(intent);
             }
         });

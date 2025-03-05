@@ -67,6 +67,7 @@
         <activity android:name=".mechanic.MechanicActivity"/>
         <activity android:name=".mechanic.AvailabilityActivity"/>
         <activity android:name=".mechanic.HistoryActivity"/>
+        <activity android:name=".UserMechanic.NearestMechanicsActivity"/>
 
 
 
