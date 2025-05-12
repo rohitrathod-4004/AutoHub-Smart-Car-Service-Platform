@@ -47,11 +47,18 @@ dependencies {
     implementation("com.google.firebase:firebase-database") // Realtime Database
     implementation("com.google.firebase:firebase-storage") // Firebase Storage
 
+    implementation ("com.android.volley:volley:1.2.1")  //HTTP library , HTTP library
+    implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
+
+
+
     // Razorpay SDK
     implementation("com.razorpay:checkout:1.6.21")
 
     // Google Play Services
     implementation("com.google.android.gms:play-services-tasks:18.2.0")
+
+
 
     // UI Components
     implementation("androidx.recyclerview:recyclerview:1.3.2")
@@ -62,7 +69,7 @@ dependencies {
 
     // Lottie Animations
     implementation("com.airbnb.android:lottie:6.4.0")
-
+    implementation("androidx.gridlayout:gridlayout:1.1.0")
 
 
     // Testing

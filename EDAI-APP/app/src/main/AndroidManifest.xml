@@ -1,6 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -71,6 +72,11 @@
         <activity android:name=".UserMechanic.MechanicActivityUser"/>
         <activity android:name=".UserMechanic.EmergencyActivity"/>
         <activity android:name=".mechanic.MechanicEmergencyRequestsActivity"/>
+        <activity android:name=".OBD.Obd_fetch"/>
+        <activity android:name=".ObdDataActivity_User"/>
+        <activity android:name=".OBD_Dashboard_User"/>
+        <activity android:name=".GeoFenceActivity_User"/>
+
 
     </application>
 </manifest>

@@ -92,7 +92,7 @@ public class NearestMechanicsActivity extends AppCompatActivity {
                             if (distance <= 10) { // 10 km radius
                                 mechanicList.add(new MechanicModel(
                                         document.getString("name"),
-                                        document.getString("mobile"),
+                                        document.getString("phone"),
                                         distance
                                 ));
                             }

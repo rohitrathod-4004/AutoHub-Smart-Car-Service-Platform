@@ -5,21 +5,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-<<<<<<< Updated upstream
-=======
 
+import com.cscorner.autohub.OBD.Obd_fetch;
+import com.cscorner.autohub.UserMechanic.MechanicActivityUser;
 import com.cscorner.autohub.UserMechanic.NearestMechanicsActivity;
->>>>>>> Stashed changes
+import com.cscorner.autohub.mechanic.MechanicActivity;
 import com.google.firebase.FirebaseApp;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageButton goToWashingPage ;
-
-
+    ImageButton goToWashingPage, goToMechanicPage, expenseManagerButton, obd , geoFenceStatus;
+    ImageView profileButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,39 +25,32 @@ public class MainActivity extends AppCompatActivity {
         FirebaseApp.initializeApp(this);
         setContentView(R.layout.main_page); // Linking main_page.xml
 
-        // Get reference to the ImageButton for expenseManager
-        ImageButton expenseManagerButton = findViewById(R.id.expenseManager);
-        ImageView profilebutton = findViewById(R.id.imageView10);
+        // Initialize UI elements
+        expenseManagerButton = findViewById(R.id.expenseManager);
+        goToWashingPage = findViewById(R.id.washingCenter);
+        goToMechanicPage = findViewById(R.id.mechanic);
+        profileButton = findViewById(R.id.imageView10);
+        obd = findViewById(R.id.obd);
+        geoFenceStatus = findViewById(R.id.geoFenceStatus);
 
-        // Set an onClickListener to redirect to ExpenseActivity
+        // Set OnClickListener for Expense Manager
         expenseManagerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Intent to go to ExpenseActivity
                 Intent intent = new Intent(MainActivity.this, ExpenseActivity.class);
                 startActivity(intent);
             }
         });
-        goToWashingPage = findViewById(R.id.washingCenter);
 
+        // Set OnClickListener for Washing Center
         goToWashingPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent goToWashingPage = new Intent(MainActivity.this, WashingPage.class);
-                startActivity(goToWashingPage);
-
-            }
-        });
-        profilebutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent gotoProfile = new Intent(MainActivity.this , Profile_userActivity.class);
-                startActivity(gotoProfile);
+                Intent intent = new Intent(MainActivity.this, Washing.class);
+                startActivity(intent);
             }
         });
 
-<<<<<<< Updated upstream
-=======
         // Set OnClickListener for Mechanic Assistance
         goToMechanicPage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,8 +67,23 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, Profile_userActivity.class);
                 startActivity(intent);
             }
+
+
         });
->>>>>>> Stashed changes
+        obd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ObdDataActivity_User.class);
+                startActivity(intent);
+            }
+        });
+
+        geoFenceStatus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, GeoFenceActivity_User.class);
+                startActivity(intent);
+            }
+        });
     }
 }
-

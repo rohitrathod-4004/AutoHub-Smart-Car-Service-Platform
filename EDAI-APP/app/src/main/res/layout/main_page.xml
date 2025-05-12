@@ -4,187 +4,212 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#82B2DB"
-    android:backgroundTint="#82B2DB">
+    android:background="#DAF4FF"
+    tools:context=".MainActivity">
 
+    <!-- Header Title -->
     <TextView
         android:id="@+id/textView27"
-        android:layout_width="414dp"
-        android:layout_height="78dp"
-        android:background="#FF5DAAE3"
-        android:backgroundTint="#FF5DAAE3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:backgroundTint="#D91D1D"
         android:gravity="center"
-        android:paddingStart="30dp"
         android:text="@string/autohub"
-        android:textColor="#090909"
-        android:textSize="40sp"
+        android:textColor="@color/black"
+        android:textSize="36sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ImageButton
-        android:id="@+id/washingCenter"
-        android:layout_width="164dp"
-        android:layout_height="146dp"
-        android:scaleType="fitCenter"
-        android:background="#82B2DB"
-        android:contentDescription="@string/go_to_washing"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.886"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView27"
-        app:layout_constraintVertical_bias="0.244"
-        app:srcCompat="@drawable/car_wash" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
-<<<<<<< Updated upstream
-=======
-    <ImageButton
-        android:id="@+id/mechanic"
-        android:layout_width="164dp"
-        android:layout_height="146dp"
-        android:background="#82B2DB"
-        android:contentDescription="@string/go_to_washing"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.117"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView27"
-        app:layout_constraintVertical_bias="0.594"
-        app:srcCompat="@drawable/mechanic_logo" />
-
->>>>>>> Stashed changes
-    <TextView
-        android:id="@+id/expenseText"
-        android:layout_width="86dp"
-        android:layout_height="29dp"
-        android:gravity="center"
-        android:text="@string/expense"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.238"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/washingCenter"
-        app:layout_constraintVertical_bias="0.016" />
-
-    <TextView
-        android:id="@+id/washingText"
-        android:layout_width="85dp"
-        android:layout_height="28dp"
-        android:gravity="center"
-        android:text="@string/washing"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.783"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/washingCenter"
-        app:layout_constraintVertical_bias="0.018" />
-
-    <TextView
-<<<<<<< Updated upstream
-=======
-        android:id="@+id/mechanicText"
-        android:layout_width="89dp"
-        android:layout_height="29dp"
-        android:gravity="center"
-        android:text="@string/mechanic"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.236"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/washingCenter"
-        app:layout_constraintVertical_bias="0.535" />
-
-    <TextView
->>>>>>> Stashed changes
-        android:id="@+id/moreUtilitiesToAddText"
-        android:layout_width="359dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="76dp"
-        android:gravity="center"
-        android:text="more utilities coming soon..."
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.552"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageButton"
-        app:layout_constraintVertical_bias="0.094" />
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="120dp"
-        android:layout_height="146dp"
-        android:background="#FEFEFE"
-        android:contentDescription="@string/add_utilities"
-        android:text=""
-        android:visibility="gone"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.559"
-        app:srcCompat="@drawable/baseline_add_24" />
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="55dp"
-        android:layout_height="41dp"
-        android:background="#FF5DAAE3"
-        android:visibility="gone"
-        android:contentDescription="@string/back_button"
-        app:layout_constraintBottom_toBottomOf="@+id/textView27"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.04"
-        app:layout_constraintStart_toStartOf="@+id/textView27"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.38"
-        app:srcCompat="@drawable/baseline_arrow_back_ios_24"
-        tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="14dp" />
-
+    <!-- Profile Icon -->
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="63dp"
-        android:layout_height="51dp"
-        android:background="#FF5DAAE3"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/rounded_bg_white"
         android:contentDescription="@string/profile_photo"
-        app:layout_constraintBottom_toBottomOf="@+id/textView27"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/textView27"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_foreground"
-        tools:layout_editor_absoluteX="21dp"
-        tools:layout_editor_absoluteY="58dp" />
-
-    <ImageButton
-        android:id="@+id/expenseManager"
-        android:layout_width="164dp"
-        android:layout_height="146dp"
-        android:background="#82B2DB"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        android:text=""
-        android:contentDescription="@string/expensemanagerbutton"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.101"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <!-- Scrollable Grid -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@+id/textView27"
+        app:layout_constraintBottom_toTopOf="@+id/moreUtilitiesToAddText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.244"
-        app:srcCompat="@drawable/car_expense"
-        tools:ignore="ContentDescription" />
+        app:layout_constraintEnd_toEndOf="parent">
 
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            app:alignmentMode="alignMargins"
+            app:columnCount="2"
+            app:rowCount="3">
+
+            <!-- Button 1: Expense Manager -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <ImageButton
+                    android:id="@+id/expenseManager"
+                    android:layout_width="147dp"
+                    android:layout_height="161dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:contentDescription="@string/expensemanagerbutton"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/car_expense" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/expense"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <!-- Button 2: Washing Center -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <ImageButton
+                    android:id="@+id/washingCenter"
+                    android:layout_width="147dp"
+                    android:layout_height="161dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="@string/go_to_washing"
+                    app:srcCompat="@drawable/car_wash" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/washing"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <!-- Button 3: Mechanic -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <ImageButton
+                    android:id="@+id/mechanic"
+                    android:layout_width="147dp"
+                    android:layout_height="161dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="@string/mechanic"
+                    app:srcCompat="@drawable/mechanic_logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mechanic"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <!-- Button 4: OBD -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <ImageButton
+                    android:id="@+id/obd"
+                    android:layout_width="147dp"
+                    android:layout_height="161dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="@string/obd_reader"
+                    app:srcCompat="@drawable/obd" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/obd_reader"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <!-- Button 5: GeoFence Status -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <ImageButton
+                    android:id="@+id/geoFenceStatus"
+                    android:layout_width="147dp"
+                    android:layout_height="161dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="@string/geofence_status"
+                    app:srcCompat="@drawable/geofence" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/geofence_status"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:gravity="center" />
+            </LinearLayout>
+
+        </androidx.gridlayout.widget.GridLayout>
+    </ScrollView>
+
+    <!-- Coming Soon Text -->
+    <TextView
+        android:id="@+id/moreUtilitiesToAddText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="More utilities coming soon..."
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:textColor="#555"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

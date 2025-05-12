@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#f2f2f2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textHeading"
+        android:text="Live Vehicle Stats"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- CardView for telemetry data -->
+    <androidx.cardview.widget.CardView
+        android:layout_marginBottom="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:padding="16dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView android:id="@+id/textSpeed" style="@style/StatText" />
+            <TextView android:id="@+id/textRPM" style="@style/StatText" />
+            <TextView android:id="@+id/textCoolant" style="@style/StatText" />
+            <TextView android:id="@+id/textThrottle" style="@style/StatText" />
+            <TextView android:id="@+id/textMAF" style="@style/StatText" />
+            <TextView android:id="@+id/textOdometer" style="@style/StatText" />
+            <TextView android:id="@+id/textFuel" style="@style/StatText" />
+            <TextView android:id="@+id/textFault" style="@style/StatText" />
+            <TextView android:id="@+id/textGeoFence" style="@style/StatText" />
+            <TextView android:id="@+id/textTimestamp" style="@style/StatText" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Button to navigate to the dashboard -->
+    <Button
+        android:id="@+id/buttonDashboard"
+        android:text="View Dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#00796B"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>
