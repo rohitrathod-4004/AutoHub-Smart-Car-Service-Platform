@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".mechanic.MechanicActivity">
 
     <Button
         android:id="@+id/seeHistory"
@@ -19,10 +20,20 @@
         android:id="@+id/be_active"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
+        android:layout_marginStart="64dp"
         android:text="Availability"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.349" />
+        app:layout_constraintVertical_bias="0.348" />
+
+    <Button
+        android:id="@+id/emergencyRequests"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Emergency Requests"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seeHistory"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="64dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

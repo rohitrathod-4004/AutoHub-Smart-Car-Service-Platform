@@ -8,14 +8,15 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.cscorner.autohub.UserMechanic.NearestMechanicsActivity;
-
+import com.cscorner.autohub.OBD.Obd_fetch;
 import com.cscorner.autohub.UserMechanic.MechanicActivityUser;
+import com.cscorner.autohub.UserMechanic.NearestMechanicsActivity;
+import com.cscorner.autohub.mechanic.MechanicActivity;
 import com.google.firebase.FirebaseApp;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageButton goToWashingPage, goToMechanicPage, expenseManagerButton;
+    ImageButton goToWashingPage, goToMechanicPage, expenseManagerButton, obd , geoFenceStatus;
     ImageView profileButton;
 
     @Override
@@ -29,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         goToWashingPage = findViewById(R.id.washingCenter);
         goToMechanicPage = findViewById(R.id.mechanic);
         profileButton = findViewById(R.id.imageView10);
+        obd = findViewById(R.id.obd);
+        geoFenceStatus = findViewById(R.id.geoFenceStatus);
 
         // Set OnClickListener for Expense Manager
         expenseManagerButton.setOnClickListener(new View.OnClickListener() {
@@ -43,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         goToWashingPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, WashingPage.class);
+                Intent intent = new Intent(MainActivity.this, Washing.class);
                 startActivity(intent);
             }
         });
@@ -64,21 +67,21 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, Profile_userActivity.class);
                 startActivity(intent);
             }
+
+
         });
-        // Set OnClickListener for Mechanic Assistance
-        goToMechanicPage.setOnClickListener(new View.OnClickListener() {
+        obd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, NearestMechanicsActivity.class);
+                Intent intent = new Intent(MainActivity.this, ObdDataActivity_User.class);
                 startActivity(intent);
             }
         });
 
-        // Set OnClickListener for Profile Button
-        profileButton.setOnClickListener(new View.OnClickListener() {
+        geoFenceStatus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Profile_userActivity.class);
+                Intent intent = new Intent(MainActivity.this, GeoFenceActivity_User.class);
                 startActivity(intent);
             }
         });

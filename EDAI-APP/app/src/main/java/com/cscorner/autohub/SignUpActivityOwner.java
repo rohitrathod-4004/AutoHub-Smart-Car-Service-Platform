@@ -104,6 +104,7 @@ public class SignUpActivityOwner extends AppCompatActivity {
         ownerData.put("shopLocation", shopLocation);
         ownerData.put("profession", profession);
         ownerData.put("role", "owner");
+        ownerData.put("verification", "received");
 
         // Add expenses only for Washing Center Owners
         if (profession.equals("Washing Center Owner")) {
@@ -116,7 +117,7 @@ public class SignUpActivityOwner extends AppCompatActivity {
             ownerData.put("doorStepWashing", 0);
             ownerData.put("pickUpReturnWashing", 0);
             ownerData.put("normalWashing", 0);
-            ownerData.put("verification", "received");
+            //ownerData.put("verification", "received");
         }
 
         db.collection("WashingCenterOwners").document(ownerId)

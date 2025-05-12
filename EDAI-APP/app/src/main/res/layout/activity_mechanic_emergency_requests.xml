@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@android:color/white">
+
+    <!-- Title Bar -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Emergency Requests"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:padding="10dp" />
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical"
+        android:padding="5dp"
+        android:clipToPadding="false" />
+
+    <!-- No Requests Text (Hidden Initially) -->
+    <TextView
+        android:id="@+id/noRequestsTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No emergency requests found."
+        android:textSize="16sp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:padding="10dp" />
+
+</LinearLayout>

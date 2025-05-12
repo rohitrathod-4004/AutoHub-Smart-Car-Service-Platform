@@ -26,9 +26,7 @@
     <string-array name="profession_array">
         <item>Washing Center Owner</item>
         <item>Mechanic</item>
-        <item>Car Rental Service</item>
-        <item>Car Accessories Shop</item>
-        <item>Other</item>
+
     </string-array>
     <string-array name="profession_list">
         <item>Car Washer</item>
@@ -71,4 +69,7 @@
     <string name="document_image">document_image\n</string>
     <string name="driving_license">driving_license</string>
     <string name="mechanic">Mechanic</string>
+    <string name="obd_reader">Car_Diagnosis</string>
+    <string name="Mechanic_Assistance">Mechanic Assistance</string>
+    <string name="geofence_status">GeoFence Status\n</string>
 </resources>
