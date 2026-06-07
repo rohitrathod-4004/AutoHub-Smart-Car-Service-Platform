@@ -71,11 +71,4 @@ AutoHub is a comprehensive Android application designed to bridge the gap betwee
     *   Allow Gradle to sync the project dependencies.
     *   Click on **Run** to build and deploy the app to your emulator or physical device.
 
-## 📱 Screenshots & Visuals
-*(Consider adding screenshots of the app's key screens here, such as the Dashboard, Map view for Mechanics, and Expense Charts).*
 
-## 🤝 Contributing
-Contributions, issues, and feature requests are welcome! Feel free to check the issues page if you want to contribute.
-
-## 📝 License
-This project is licensed under the MIT License - see the LICENSE file for details.
