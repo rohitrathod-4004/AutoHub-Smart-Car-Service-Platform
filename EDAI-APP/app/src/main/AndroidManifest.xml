@@ -76,6 +76,7 @@
         <activity android:name=".ObdDataActivity_User"/>
         <activity android:name=".OBD_Dashboard_User"/>
         <activity android:name=".GeoFenceActivity_User"/>
+        <activity android:name=".UserMechanic.EmergencyRequestDetailsActivity"/>
 
 
     </application>

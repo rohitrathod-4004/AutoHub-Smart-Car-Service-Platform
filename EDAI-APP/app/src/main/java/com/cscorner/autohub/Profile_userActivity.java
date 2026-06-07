@@ -78,9 +78,6 @@ public class Profile_userActivity extends AppCompatActivity {
                 aadhaarCardLayout.setOnClickListener(v -> navigateToDocumentDetail("aadhaar"));
                 licenseLayout.setOnClickListener(v -> navigateToDocumentDetail("drivingLicense"));
                 panCardLayout.setOnClickListener(v -> navigateToDocumentDetail("panCard"));
-
-
-
             }
         });
     }

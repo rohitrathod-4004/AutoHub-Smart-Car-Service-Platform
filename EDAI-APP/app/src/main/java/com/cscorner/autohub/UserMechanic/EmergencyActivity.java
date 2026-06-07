@@ -5,9 +5,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.cscorner.autohub.R;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.CollectionReference;
-import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -36,23 +35,21 @@ public class EmergencyActivity extends AppCompatActivity {
     }
 
     private void createEmergencyRequest() {
-        CollectionReference requestsRef = db.collection("EmergencyRequests");
-
         long currentTime = System.currentTimeMillis();
-        long expiryTime = currentTime + TIMEOUT_MS; // Expiry timestamp (current time + 5 minutes)
+        long expiryTime = currentTime + TIMEOUT_MS;
 
-        // Create a single emergency request
         Map<String, Object> request = new HashMap<>();
         request.put("userId", userId);
-        request.put("mechanicId", null); // Initially unassigned
+        request.put("mechanicId", null);
         request.put("status", "Pending");
         request.put("timestamp", currentTime);
-        request.put("expiryTimestamp", expiryTime); // Expiry time
+        request.put("expiryTimestamp", expiryTime);
 
-        // Add request to Firestore
-        requestsRef.add(request).addOnSuccessListener(documentReference -> {
-            requestRef = documentReference;
-            startRequestTimeout(expiryTime); // Start timeout check
+        // Use userId as the document ID
+        requestRef = db.collection("EmergencyRequests").document(userId);
+
+        requestRef.set(request).addOnSuccessListener(unused -> {
+            startRequestTimeout(expiryTime);
             Toast.makeText(this, "Emergency request sent!", Toast.LENGTH_SHORT).show();
         }).addOnFailureListener(e -> {
             Toast.makeText(this, "Failed to send emergency request!", Toast.LENGTH_SHORT).show();
@@ -64,7 +61,8 @@ public class EmergencyActivity extends AppCompatActivity {
         new android.os.Handler().postDelayed(() -> {
             if (requestRef != null) {
                 requestRef.get().addOnSuccessListener(documentSnapshot -> {
-                    if (documentSnapshot.exists() && "Pending".equals(documentSnapshot.getString("status"))) {
+                    if (documentSnapshot.exists() &&
+                            "Pending".equals(documentSnapshot.getString("status"))) {
                         requestRef.delete();
                         Toast.makeText(this, "No mechanic responded. Request removed.", Toast.LENGTH_LONG).show();
                     }

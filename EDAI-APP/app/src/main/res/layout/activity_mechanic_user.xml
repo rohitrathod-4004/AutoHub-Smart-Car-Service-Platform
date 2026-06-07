@@ -4,27 +4,122 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#B9E1FF"
+    android:padding="24dp"
     tools:context=".UserMechanic.MechanicActivityUser">
 
-    <Button
-        android:id="@+id/nearbyMechanics"
+    <!-- App Logo -->
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="107dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="App Logo"
+        android:src="@drawable/car"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- App Name -->
+
+    <!-- Nearby Mechanics Icon -->
+    <TextView
+        android:id="@+id/appName"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/Mechanic_Assistance"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appLogo" />
+
+    <!-- Nearby Mechanics Button -->
+    <ImageView
+        android:id="@+id/nearbyIcon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Nearby Mechanics"
+        android:src="@drawable/ic_location"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appName" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/nearbyMechanics"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Nearby Mechanics"
-        app:layout_constraintBottom_toTopOf="@+id/emergency"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#0288D1"
+        app:cornerRadius="16dp"
+        style="@style/Widget.MaterialComponents.Button"
+        app:layout_constraintTop_toBottomOf="@id/nearbyIcon"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
 
-    <Button
+    <!-- Emergency Icon -->
+
+    <!-- Emergency Button -->
+    <ImageView
+        android:id="@+id/emergencyIcon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        android:scaleType="fitXY"
+        android:contentDescription="Emergency"
+        android:src="@drawable/ic_emergency"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nearbyMechanics" />
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/emergency"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Emergency"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#0288D1"
+        app:cornerRadius="16dp"
+        style="@style/Widget.MaterialComponents.Button"
+        app:layout_constraintTop_toBottomOf="@id/emergencyIcon"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nearbyMechanics"
-        app:layout_constraintVertical_bias="0.1" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <!-- Footer -->
+    <TextView
+        android:id="@+id/footerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Powered by Autohub"
+        android:textSize="12sp"
+        android:textColor="#555555"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/emergencyDetails"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="View Emergency Details"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#0288D1"
+        app:cornerRadius="16dp"
+        style="@style/Widget.MaterialComponents.Button"
+        app:layout_constraintTop_toBottomOf="@id/emergency"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

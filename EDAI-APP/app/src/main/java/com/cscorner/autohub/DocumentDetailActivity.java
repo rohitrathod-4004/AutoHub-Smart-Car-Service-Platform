@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -104,9 +105,13 @@ public class DocumentDetailActivity extends AppCompatActivity {
             newImageUri = data.getData();
             if (newImageUri != null) {
                 documentImageView.setImageURI(newImageUri);
+                Log.d("DEBUG", "Picked image URI: " + newImageUri.toString());
+            } else {
+                Log.e("DEBUG", "Image URI is null");
             }
         }
     }
+
 
     private void saveChanges() {
         String newDocumentNumber = documentNumberEditText.getText().toString().trim();

@@ -170,7 +170,7 @@ public class WashingCenterDetailActivity extends AppCompatActivity implements Pa
 
     private void startPayment() {
         Checkout checkout = new Checkout();
-        checkout.setKeyID("rzp_test_YLEm5BP6S9PEP8"); // Replace with your Razorpay test key
+        checkout.setKeyID(BuildConfig.RAZORPAY_KEY);
 
         try {
             JSONObject options = new JSONObject();

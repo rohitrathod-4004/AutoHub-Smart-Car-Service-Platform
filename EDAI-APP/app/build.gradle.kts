@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("com.google.gms.google-services")
@@ -7,6 +9,15 @@ android {
     namespace = "com.cscorner.autohub"
     compileSdk = 34
 
+    val localProperties = Properties()
+    val localPropertiesFile = rootProject.file("local.properties")
+    if (localPropertiesFile.exists()) {
+        localProperties.load(localPropertiesFile.inputStream())
+    }
+
+    buildFeatures {
+        buildConfig = true
+    }
 
     defaultConfig {
         applicationId = "com.cscorner.autohub"
@@ -16,6 +27,9 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        
+        val razorpayKey = localProperties.getProperty("RAZORPAY_KEY") ?: ""
+        buildConfigField("String", "RAZORPAY_KEY", "\"$razorpayKey\"")
     }
 
     buildTypes {

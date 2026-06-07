@@ -1,0 +1,54 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B9E1FF"
+    android:padding="24dp"
+    tools:context=".UserMechanic.EmergencyRequestDetailsActivity">
+
+    <TextView
+        android:id="@+id/mechanicName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mechanic Name: "
+        android:textSize="18sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/mechanicPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone: "
+        android:textSize="18sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/mechanicName"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/requestStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Request Status: "
+        android:textSize="18sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/mechanicPhone"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Footer -->
+    <TextView
+        android:id="@+id/footerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Powered by Autohub"
+        android:textSize="12sp"
+        android:textColor="#555555"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
