@@ -59,7 +59,7 @@ AutoHub is a comprehensive Android application designed to bridge the gap betwee
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/sanskaraut/Autohub4thSem.git
+    https://github.com/rohitrathod-4004/AutoHub-Smart-Car-Service-Platform.git
     ```
 2.  **Open the project:**
     Open Android Studio and select `Open an existing Android Studio project`. Navigate to the cloned directory and select the `EDAI-APP` folder.
